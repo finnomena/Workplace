@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -91,6 +92,12 @@
                                 </connections>
                             </menuItem>
                             <menuItem isSeparatorItem="YES" id="Sy1-KX-cFn"/>
+                            <menuItem title="Refresh" keyEquivalent="r" id="Hcc-6J-Ga8">
+                                <connections>
+                                    <action selector="handleRefresh:" target="EbJ-dY-bL0" id="GeY-Zd-Szb"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem isSeparatorItem="YES" id="3pj-Q4-zeg"/>
                             <menuItem title="Close" keyEquivalent="w" id="Wdm-lZ-ptX">
                                 <connections>
                                     <action selector="performClose:" target="-1" id="GEn-Rb-CAE"/>

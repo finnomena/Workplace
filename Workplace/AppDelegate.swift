@@ -52,6 +52,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         openWindow(url: url!)
     }
 
+    @IBAction func handleRefresh(_ sender: NSMenuItem) {
+        guard let vc = NSApplication.shared.keyWindow?.contentViewController as? ViewController else { return }
+        vc.webView.reload(nil)
+    }
+
     // MARK: - Helpers
 
     func openWindow(url: URL) {
@@ -65,7 +70,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         viewController.url = url
         viewController.loadRequest(request)
     }
-}// EBE9E7
+}
 
 extension NSWindow {
     func setMinimalStyle() {
